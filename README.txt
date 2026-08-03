@@ -1,18 +1,18 @@
-Happy Trip Holiday — เวอร์ชันอัปโหลดง่าย
+Happy Trip Holiday Professional Website
 
-สำคัญ:
-ไฟล์ทุกไฟล์อยู่ระดับเดียวกันทั้งหมด ไม่ต้องใช้โฟลเดอร์ assets
+เวอร์ชันนี้เพิ่ม:
+- โปรแกรมทัวร์ 3 หมวด
+- รีวิวตัวอย่าง พร้อมข้อความเตือนให้เปลี่ยนเป็นรีวิวจริง
+- แกลเลอรี
+- แบบฟอร์มขอใบเสนอราคา ส่งผ่าน WhatsApp
+- Google Maps
+- SEO และ Structured Data
+- ปุ่มโทร LINE และ WhatsApp
+- รองรับมือถือ
 
-วิธีอัปโหลดขึ้น GitHub:
-1. เข้า Repository HappytripHoliday
+วิธีอัปโหลด:
+1. เข้า GitHub Repository HappytripHoliday
 2. Add file > Upload files
-3. เลือกไฟล์ทั้งหมดในโฟลเดอร์นี้
-4. กด Commit changes
+3. เลือกไฟล์ทั้งหมดจากโฟลเดอร์นี้
+4. Commit changes
 5. รอ 1–2 นาที แล้วรีเฟรชเว็บไซต์
-
-ไฟล์หลัก:
-- index.html
-- logo.png
-- hero-bus.jpeg
-- fleet.jpeg
-- รูปสถานที่ท่องเที่ยวทั้งหมด

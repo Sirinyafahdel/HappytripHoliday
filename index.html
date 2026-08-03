@@ -3,73 +3,164 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Happy Trip Holiday | บริษัททัวร์หนองบัวลำภู</title>
-  <meta name="description" content="Happy Trip Holiday บริการจัดทัวร์ในประเทศ ศึกษาดูงาน สัมมนา ทัศนศึกษา และทัวร์หมู่คณะทั่วประเทศไทย">
-  <meta name="keywords" content="Happy Trip Holiday, บริษัททัวร์หนองบัวลำภู, ทัวร์ในประเทศ, ศึกษาดูงาน, สัมมนา, ทัศนศึกษา">
+
+  <meta name="description" content="Happy Trip Holiday บริษัททัวร์หนองบัวลำภู บริการจัดทัวร์ในประเทศ ศึกษาดูงาน สัมมนา ทัศนศึกษา รถทัวร์ VIP และทัวร์หมู่คณะทั่วประเทศไทย">
+  <meta name="keywords" content="Happy Trip Holiday, บริษัททัวร์หนองบัวลำภู, รถทัวร์หนองบัวลำภู, ศึกษาดูงาน, สัมมนา, ทัศนศึกษา, ทัวร์จันทบุรี, ทัวร์ระยองพัทยา">
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#082c5c">
+
+  <meta property="og:title" content="Happy Trip Holiday">
+  <meta property="og:description" content="บริการจัดทัวร์ ศึกษาดูงาน สัมมนา ทัศนศึกษา และทัวร์หมู่คณะทั่วประเทศไทย">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="logo.png">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TravelAgency",
+    "name": "Happy Trip Holiday",
+    "description": "บริการจัดทัวร์ในประเทศ ศึกษาดูงาน สัมมนา ทัศนศึกษา และทัวร์หมู่คณะ",
+    "telephone": ["+66-84-049-4999","+66-95-769-7749"],
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "240 หมู่ 6 ตำบลลำภู",
+      "addressLocality": "อำเภอเมืองหนองบัวลำภู",
+      "addressRegion": "หนองบัวลำภู",
+      "postalCode": "39000",
+      "addressCountry": "TH"
+    }
+  }
+  </script>
+
   <style>
+    :root{
+      --navy:#082c5c;
+      --navy-dark:#071f42;
+      --blue:#0a5c8c;
+      --gold:#d4a72c;
+      --orange:#f25a29;
+      --green:#06c755;
+      --light:#f5f8fb;
+      --text:#1f2933;
+      --muted:#64748b;
+      --white:#fff;
+      --shadow:0 10px 30px rgba(7,31,66,.12);
+    }
+
     *{box-sizing:border-box;margin:0;padding:0;scroll-behavior:smooth}
-    body{font-family:Arial,Tahoma,sans-serif;color:#1f2933;background:#f6f8f7;line-height:1.7}
+    body{font-family:Arial,Tahoma,sans-serif;color:var(--text);background:var(--light);line-height:1.7}
     img{display:block;max-width:100%}
+    a{color:inherit}
     .container{width:min(1180px,92%);margin:auto}
-    header{background:linear-gradient(135deg,#082c5c,#0a5c8c);color:#fff;padding:16px 0}
+
+    header{background:linear-gradient(135deg,var(--navy),var(--blue));color:#fff;padding:15px 0}
     .topbar{display:flex;align-items:center;justify-content:space-between;gap:20px}
     .brand{display:flex;align-items:center;gap:16px}
-    .brand img{width:100px;height:100px;object-fit:contain;background:#fff;border-radius:16px;padding:6px}
-    .brand h1{font-size:34px;color:#d4a72c;line-height:1.15}
+    .brand img{width:98px;height:98px;object-fit:contain;background:#fff;border-radius:18px;padding:6px;box-shadow:0 5px 18px rgba(0,0,0,.18)}
+    .brand h1{font-size:34px;color:var(--gold);line-height:1.15}
     .brand p{font-size:15px}
-    .license{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.3);padding:10px 18px;border-radius:30px}
-    nav{position:sticky;top:0;z-index:100;background:#071f42;box-shadow:0 4px 14px rgba(0,0,0,.18)}
+    .license{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.35);padding:10px 18px;border-radius:30px;text-align:center}
+
+    nav{position:sticky;top:0;z-index:100;background:var(--navy-dark);box-shadow:0 4px 14px rgba(0,0,0,.18)}
     nav .container{display:flex;justify-content:center;flex-wrap:wrap}
-    nav a{color:#fff;text-decoration:none;padding:14px 16px;font-weight:700}
-    nav a:hover{background:rgba(255,255,255,.08);color:#e1b64f}
-    .hero{min-height:680px;background:linear-gradient(rgba(0,0,0,.30),rgba(0,0,0,.64)),url("hero-bus.jpeg") center/cover;display:flex;align-items:center;text-align:center;color:#fff;padding:60px 20px}
-    .hero-content{max-width:900px;margin:auto}
-    .badge{display:inline-block;padding:9px 18px;border:1px solid rgba(255,255,255,.55);border-radius:30px;background:rgba(255,255,255,.14);margin-bottom:20px}
+    nav a{color:#fff;text-decoration:none;padding:14px 15px;font-weight:700}
+    nav a:hover{background:rgba(255,255,255,.08);color:#f5d878}
+
+    .hero{min-height:690px;background:linear-gradient(rgba(0,0,0,.25),rgba(0,0,0,.67)),url("hero-bus.jpeg") center/cover;display:flex;align-items:center;text-align:center;color:#fff;padding:60px 20px}
+    .hero-content{max-width:920px;margin:auto}
+    .badge{display:inline-block;padding:9px 18px;border:1px solid rgba(255,255,255,.55);border-radius:30px;background:rgba(255,255,255,.14);backdrop-filter:blur(5px);margin-bottom:20px}
     .hero h2{font-size:58px;line-height:1.25;text-shadow:2px 3px 10px #000;margin-bottom:16px}
     .hero p{font-size:22px;text-shadow:1px 2px 5px #000;margin-bottom:26px}
-    .button{display:inline-block;color:#fff;text-decoration:none;font-weight:700;padding:14px 25px;margin:7px;border-radius:40px;box-shadow:0 6px 16px rgba(0,0,0,.25);transition:.25s}
+
+    .button{display:inline-block;color:#fff;text-decoration:none;font-weight:700;padding:14px 25px;margin:7px;border:0;border-radius:40px;box-shadow:0 6px 16px rgba(0,0,0,.25);transition:.25s;cursor:pointer}
     .button:hover{transform:translateY(-3px)}
-    .phone{background:#f25a29}.line{background:#06c755}.maps{background:#0a6fba}.primary{background:#0b6b57}
-    section{padding:70px 0}
-    .section-title{text-align:center;color:#082c5c;font-size:36px;margin-bottom:8px}
-    .section-subtitle{text-align:center;color:#62717b;margin-bottom:36px}
-    .about-grid,.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center}
-    .about-image img{height:460px;width:100%;object-fit:cover;border-radius:22px;box-shadow:0 10px 28px rgba(0,0,0,.16)}
-    .panel{background:#fff;padding:34px;border-radius:22px;box-shadow:0 8px 26px rgba(0,0,0,.09)}
-    .panel h3{color:#082c5c;font-size:27px;margin-bottom:14px}
-    .check-list{list-style:none;margin-top:18px}.check-list li{margin:9px 0}
+    .phone{background:var(--orange)}
+    .line{background:var(--green)}
+    .maps{background:#0a6fba}
+    .primary{background:#0b6b57}
+    .whatsapp{background:#25d366}
+
+    section{padding:72px 0}
+    .section-title{text-align:center;color:var(--navy);font-size:36px;margin-bottom:8px}
+    .section-subtitle{text-align:center;color:var(--muted);margin-bottom:36px}
+
+    .about-grid,.contact-grid,.quote-grid{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center}
+    .about-image img{height:460px;width:100%;object-fit:cover;border-radius:22px;box-shadow:var(--shadow)}
+    .panel{background:#fff;padding:34px;border-radius:22px;box-shadow:var(--shadow)}
+    .panel h3{color:var(--navy);font-size:27px;margin-bottom:14px}
+    .check-list{list-style:none;margin-top:18px}
+    .check-list li{margin:9px 0}
+
     .services-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
-    .service-card{background:#fff;padding:30px 18px;text-align:center;border-radius:20px;box-shadow:0 8px 24px rgba(0,0,0,.08)}
-    .service-card .icon{font-size:44px}.service-card h3{color:#082c5c;margin:10px 0}
+    .service-card{background:#fff;padding:30px 18px;text-align:center;border-radius:20px;box-shadow:var(--shadow);transition:.25s}
+    .service-card:hover{transform:translateY(-6px)}
+    .service-card .icon{font-size:44px}
+    .service-card h3{color:var(--navy);margin:10px 0}
+
     .fleet{background:#eef4f8}
     .fleet-grid{display:grid;grid-template-columns:1.25fr .75fr;gap:28px;align-items:center}
-    .fleet-grid img{width:100%;height:520px;object-fit:cover;border-radius:22px;box-shadow:0 10px 30px rgba(0,0,0,.14)}
+    .fleet-grid img{width:100%;height:520px;object-fit:cover;border-radius:22px;box-shadow:var(--shadow)}
+
     .tour{background:#f3f7fa}
     .tour-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-    .tour-card{background:#fff;border-radius:20px;overflow:hidden;box-shadow:0 8px 26px rgba(0,0,0,.11)}
+    .tour-card{background:#fff;border-radius:20px;overflow:hidden;box-shadow:var(--shadow);transition:.25s}
+    .tour-card:hover{transform:translateY(-6px)}
     .tour-card img{width:100%;height:220px;object-fit:cover}
-    .tour-card .content{padding:21px}.tour-card h3{color:#082c5c;font-size:22px;margin-bottom:8px}
-    .price{font-size:26px;color:#d05a20;font-weight:800;margin:12px 0}
+    .tour-card .content{padding:21px}
+    .tour-card h3{color:var(--navy);font-size:22px;margin-bottom:8px}
+    .price{font-size:25px;color:#d05a20;font-weight:800;margin:12px 0}
+
+    .reviews-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .review-card{background:#fff;padding:26px;border-radius:20px;box-shadow:var(--shadow)}
+    .stars{color:#f4b400;font-size:22px;margin-bottom:8px}
+    .review-note{font-size:13px;color:var(--muted);margin-top:12px}
+
     .gallery-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-    .gallery-grid img{width:100%;height:220px;object-fit:cover;border-radius:15px}
-    .contact{background:#eef4f8}.contact-item{margin:12px 0;font-size:17px}
+    .gallery-grid img{width:100%;height:220px;object-fit:cover;border-radius:15px;transition:.25s}
+    .gallery-grid img:hover{transform:scale(1.03)}
+
+    .quote{background:linear-gradient(135deg,#0a5c8c,#082c5c);color:#fff}
+    .quote .section-title,.quote .section-subtitle{color:#fff}
+    form{display:grid;gap:14px}
+    label{font-weight:700}
+    input,select,textarea{width:100%;padding:13px 14px;border:1px solid #d7dee8;border-radius:12px;font:inherit}
+    textarea{min-height:120px;resize:vertical}
+    .form-note{font-size:13px;color:#dbeafe}
+
+    .contact{background:#eef4f8}
+    .contact-item{margin:12px 0;font-size:17px}
     iframe{width:100%;height:360px;border:0;border-radius:14px}
-    footer{background:#071f42;color:#fff;text-align:center;padding:30px 15px}
+
+    footer{background:var(--navy-dark);color:#fff;text-align:center;padding:30px 15px}
     .floating{position:fixed;right:18px;bottom:18px;z-index:1000;display:flex;flex-direction:column;gap:10px}
     .floating a{width:58px;height:58px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;text-decoration:none;font-size:24px;box-shadow:0 6px 18px rgba(0,0,0,.3)}
+
     @media(max-width:900px){
-      .topbar,.about-grid,.contact-grid,.fleet-grid{display:grid;grid-template-columns:1fr;text-align:center}
-      .brand{justify-content:center}.services-grid,.tour-grid{grid-template-columns:repeat(2,1fr)}.gallery-grid{grid-template-columns:repeat(2,1fr)}
-      .hero h2{font-size:43px}.fleet-grid img{height:400px}
+      .topbar,.about-grid,.contact-grid,.quote-grid,.fleet-grid{display:grid;grid-template-columns:1fr;text-align:center}
+      .brand{justify-content:center}
+      .services-grid,.tour-grid,.reviews-grid{grid-template-columns:repeat(2,1fr)}
+      .gallery-grid{grid-template-columns:repeat(2,1fr)}
+      .hero h2{font-size:43px}
+      .fleet-grid img{height:400px}
     }
+
     @media(max-width:600px){
-      .brand{flex-direction:column}.brand h1{font-size:27px}.brand img{width:85px;height:85px}
-      nav a{padding:10px 7px;font-size:13px}.hero{min-height:590px}.hero h2{font-size:35px}.hero p{font-size:18px}
-      .services-grid,.tour-grid,.gallery-grid{grid-template-columns:1fr}.about-image img,.fleet-grid img{height:310px}
+      .brand{flex-direction:column}
+      .brand h1{font-size:27px}
+      .brand img{width:85px;height:85px}
+      nav a{padding:10px 7px;font-size:13px}
+      .hero{min-height:590px}
+      .hero h2{font-size:35px}
+      .hero p{font-size:18px}
+      .services-grid,.tour-grid,.reviews-grid,.gallery-grid{grid-template-columns:1fr}
+      .about-image img,.fleet-grid img{height:310px}
       section{padding:52px 0}
     }
   </style>
 </head>
+
 <body>
 
 <header>
@@ -92,7 +183,9 @@
     <a href="#services">บริการ</a>
     <a href="#fleet">รถของเรา</a>
     <a href="#tours">โปรแกรมทัวร์</a>
+    <a href="#reviews">รีวิว</a>
     <a href="#gallery">แกลเลอรี</a>
+    <a href="#quote">ขอใบเสนอราคา</a>
     <a href="#contact">ติดต่อเรา</a>
   </div>
 </nav>
@@ -162,18 +255,63 @@
 
 <section class="tour" id="tours">
   <div class="container">
-    <h2 class="section-title">โปรแกรมทัวร์จันทบุรี</h2>
-    <p class="section-subtitle">ธรรมชาติ ศาสนสถาน วิถีชุมชน และอาหารทะเล</p>
+    <h2 class="section-title">โปรแกรมทัวร์แนะนำ</h2>
+    <p class="section-subtitle">ตัวอย่างเส้นทางยอดนิยมของ Happy Trip Holiday</p>
+
     <div class="tour-grid">
-      <article class="tour-card"><img src="noen-nangphaya.jpeg" alt="จุดชมวิวเนินนางพญา"><div class="content"><h3>จุดชมวิวเนินนางพญา</h3><p>ชมถนนเลียบทะเลและทิวทัศน์อ่าวคุ้งวิมาน</p><div class="price">รวมในโปรแกรม</div></div></article>
-      <article class="tour-card"><img src="cathedral-wide.jpeg" alt="อาสนวิหารจันทบุรี"><div class="content"><h3>อาสนวิหารจันทบุรี</h3><p>ชมสถาปัตยกรรมงดงามและชุมชนริมน้ำจันทบูร</p><div class="price">รวมในโปรแกรม</div></div></article>
-      <article class="tour-card"><img src="pagoda-sea.jpeg" alt="เจดีย์กลางน้ำบ้านหัวแหลม"><div class="content"><h3>เจดีย์กลางน้ำบ้านหัวแหลม</h3><p>ชมวิวทะเลและจุดศรัทธาริมชายฝั่ง</p><div class="price">รวมในโปรแกรม</div></div></article>
-      <article class="tour-card"><img src="waterfall.jpeg" alt="น้ำตกจันทบุรี"><div class="content"><h3>เส้นทางธรรมชาติ</h3><p>พักผ่อนกับน้ำตกและพื้นที่สีเขียวของจันทบุรี</p><div class="price">รวมในโปรแกรม</div></div></article>
-      <article class="tour-card"><img src="seafood.jpeg" alt="บุฟเฟต์อาหารทะเล"><div class="content"><h3>บุฟเฟต์อาหารทะเล</h3><p>อิ่มอร่อยกับอาหารทะเลสดและเมนูพื้นถิ่น</p><div class="price">สอบถามราคา</div></div></article>
-      <article class="tour-card"><img src="chanthaburi-sign.jpeg" alt="หมู่บ้านไร้แผ่นดิน"><div class="content"><h3>หมู่บ้านไร้แผ่นดิน</h3><p>สัมผัสวิถีชุมชน ล่องแพ และบรรยากาศธรรมชาติ</p><div class="price">สอบถามโปรแกรม</div></div></article>
+      <article class="tour-card">
+        <img src="noen-nangphaya.jpeg" alt="ทัวร์จันทบุรี">
+        <div class="content">
+          <h3>จันทบุรี 4 วัน 2 คืน</h3>
+          <p>เนินนางพญา อาสนวิหาร หมู่บ้านไร้แผ่นดิน เจดีย์กลางน้ำ และบุฟเฟต์อาหารทะเล</p>
+          <div class="price">ราคาเริ่มต้น 6,888 บาท</div>
+          <a class="button primary" href="#quote">ขอใบเสนอราคา</a>
+        </div>
+      </article>
+
+      <article class="tour-card">
+        <img src="coastal-road.jpeg" alt="ทัวร์ระยองพัทยา">
+        <div class="content">
+          <h3>ระยอง–พัทยา 4 วัน 2 คืน</h3>
+          <p>ทุ่งโปรงทอง หาดแหลมแม่พิมพ์ เขาชีจรรย์ สวนนงนุช และหาดจอมเทียน</p>
+          <div class="price">ราคาเริ่มต้น 7,333 บาท</div>
+          <a class="button primary" href="#quote">ขอใบเสนอราคา</a>
+        </div>
+      </article>
+
+      <article class="tour-card">
+        <img src="cathedral-wide.jpeg" alt="ทัวร์ศึกษาดูงาน">
+        <div class="content">
+          <h3>ศึกษาดูงานและสัมมนา</h3>
+          <p>ออกแบบเส้นทางตามหัวข้อ งบประมาณ จำนวนผู้เดินทาง และวัตถุประสงค์ของหน่วยงาน</p>
+          <div class="price">จัดตามงบประมาณ</div>
+          <a class="button line" href="https://line.me/ti/p/~first240" target="_blank" rel="noopener">ติดต่อ LINE</a>
+        </div>
+      </article>
     </div>
-    <div style="text-align:center;margin-top:28px">
-      <a class="button line" href="https://line.me/ti/p/~first240" target="_blank" rel="noopener">ขอโปรแกรมและใบเสนอราคา</a>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="container">
+    <h2 class="section-title">รีวิวจากลูกค้า</h2>
+    <p class="section-subtitle">พื้นที่สำหรับนำรีวิวจริงของลูกค้ามาแสดงบนเว็บไซต์</p>
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p>ทีมงานดูแลดี เดินทางตรงเวลา และช่วยประสานงานตลอดทริป</p>
+        <div class="review-note">ตัวอย่างข้อความ — ควรเปลี่ยนเป็นรีวิวจริงก่อนเผยแพร่</div>
+      </div>
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p>โปรแกรมเหมาะกับงบประมาณ รถสะอาด และจัดการรายละเอียดได้ครบถ้วน</p>
+        <div class="review-note">ตัวอย่างข้อความ — ควรเปลี่ยนเป็นรีวิวจริงก่อนเผยแพร่</div>
+      </div>
+      <div class="review-card">
+        <div class="stars">★★★★★</div>
+        <p>เหมาะสำหรับหน่วยงานที่ต้องการจัดศึกษาดูงานและสัมมนาแบบหมู่คณะ</p>
+        <div class="review-note">ตัวอย่างข้อความ — ควรเปลี่ยนเป็นรีวิวจริงก่อนเผยแพร่</div>
+      </div>
     </div>
   </div>
 </section>
@@ -195,6 +333,66 @@
   </div>
 </section>
 
+<section class="quote" id="quote">
+  <div class="container">
+    <h2 class="section-title">ขอใบเสนอราคา</h2>
+    <p class="section-subtitle">กรอกข้อมูลแล้วกดส่ง ระบบจะเปิด WhatsApp พร้อมข้อความให้ทันที</p>
+
+    <div class="quote-grid">
+      <div>
+        <h3 style="font-size:30px;margin-bottom:12px">วางแผนทริปกับเรา</h3>
+        <p>แจ้งจุดหมาย จำนวนผู้เดินทาง วันที่เดินทาง และงบประมาณโดยประมาณ ทีมงานจะนำข้อมูลไปจัดโปรแกรมและใบเสนอราคาให้เหมาะกับคณะของคุณ</p>
+        <ul class="check-list">
+          <li>✅ ใช้ได้ทั้งทัวร์ทั่วไปและศึกษาดูงาน</li>
+          <li>✅ รองรับคณะเล็กและคณะใหญ่</li>
+          <li>✅ ปรับเส้นทางตามงบประมาณได้</li>
+        </ul>
+      </div>
+
+      <div class="panel">
+        <form id="quoteForm">
+          <div>
+            <label for="name">ชื่อผู้ติดต่อ</label>
+            <input id="name" required placeholder="เช่น คุณสมชาย">
+          </div>
+          <div>
+            <label for="phone">เบอร์โทรศัพท์</label>
+            <input id="phone" required placeholder="เช่น 08x-xxx-xxxx">
+          </div>
+          <div>
+            <label for="trip">ประเภทการเดินทาง</label>
+            <select id="trip">
+              <option>ทัวร์หมู่คณะ</option>
+              <option>ศึกษาดูงาน</option>
+              <option>สัมมนา</option>
+              <option>ทัศนศึกษา</option>
+              <option>เช่ารถพร้อมจัดโปรแกรม</option>
+            </select>
+          </div>
+          <div>
+            <label for="destination">จังหวัดหรือเส้นทางที่สนใจ</label>
+            <input id="destination" placeholder="เช่น จันทบุรี หรือ ระยอง–พัทยา">
+          </div>
+          <div>
+            <label for="people">จำนวนผู้เดินทาง</label>
+            <input id="people" type="number" min="1" placeholder="เช่น 45">
+          </div>
+          <div>
+            <label for="date">วันที่ต้องการเดินทาง</label>
+            <input id="date" type="date">
+          </div>
+          <div>
+            <label for="detail">รายละเอียดเพิ่มเติม</label>
+            <textarea id="detail" placeholder="งบประมาณ จุดขึ้นรถ จำนวนวัน หรือความต้องการเพิ่มเติม"></textarea>
+          </div>
+          <button class="button whatsapp" type="submit">ส่งข้อมูลทาง WhatsApp</button>
+          <div class="form-note">เว็บไซต์นี้เป็นเว็บแบบ Static จึงไม่เก็บข้อมูลไว้ในระบบ ข้อมูลจะถูกส่งผ่าน WhatsApp เท่านั้น</div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="contact" id="contact">
   <div class="container">
     <h2 class="section-title">ติดต่อเรา</h2>
@@ -211,6 +409,7 @@
         <a class="button line" href="https://line.me/ti/p/~first240" target="_blank" rel="noopener">เพิ่มเพื่อน LINE</a>
         <a class="button maps" href="https://maps.app.goo.gl/pk5TnpbPJMswgmpJ8?g_st=ic" target="_blank" rel="noopener">📍 เปิดเส้นทาง</a>
       </div>
+
       <div class="panel">
         <h3>แผนที่บริษัท</h3>
         <iframe src="https://www.google.com/maps?q=17.2196817,102.4312365&z=17&output=embed" loading="lazy" allowfullscreen></iframe>
@@ -230,6 +429,33 @@
   <a class="phone" href="tel:0840494999" title="โทรหาเรา">📞</a>
   <a class="line" href="https://line.me/ti/p/~first240" target="_blank" rel="noopener" title="ติดต่อ LINE">💬</a>
 </div>
+
+<script>
+  document.getElementById("quoteForm").addEventListener("submit", function(event){
+    event.preventDefault();
+
+    const name = document.getElementById("name").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const trip = document.getElementById("trip").value;
+    const destination = document.getElementById("destination").value.trim();
+    const people = document.getElementById("people").value;
+    const date = document.getElementById("date").value;
+    const detail = document.getElementById("detail").value.trim();
+
+    const message =
+      "ขอใบเสนอราคา Happy Trip Holiday\n" +
+      "ชื่อผู้ติดต่อ: " + name + "\n" +
+      "เบอร์โทร: " + phone + "\n" +
+      "ประเภท: " + trip + "\n" +
+      "เส้นทาง: " + (destination || "-") + "\n" +
+      "จำนวนผู้เดินทาง: " + (people || "-") + "\n" +
+      "วันที่เดินทาง: " + (date || "-") + "\n" +
+      "รายละเอียด: " + (detail || "-");
+
+    const url = "https://wa.me/66840494999?text=" + encodeURIComponent(message);
+    window.open(url, "_blank");
+  });
+</script>
 
 </body>
 </html>
