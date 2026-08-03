@@ -158,6 +158,20 @@
       .about-image img,.fleet-grid img{height:310px}
       section{padding:52px 0}
     }
+
+    .region-tabs{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin-bottom:28px}
+    .region-tab{border:0;background:#e5edf6;color:#082c5c;padding:11px 18px;border-radius:30px;font-weight:700;cursor:pointer}
+    .region-tab.active,.region-tab:hover{background:#082c5c;color:#fff}
+    .region-section{display:none}
+    .region-section.active{display:block}
+    .empty-region{background:#fff;padding:34px;text-align:center;border-radius:20px;box-shadow:var(--shadow);color:var(--muted)}
+    .brochure-card{background:#fff;border-radius:20px;overflow:hidden;box-shadow:var(--shadow);transition:.25s}
+    .brochure-card:hover{transform:translateY(-5px)}
+    .brochure-card img{width:100%;height:auto}
+    .brochure-info{padding:22px}
+    .brochure-info h3{color:var(--navy);font-size:24px;margin-bottom:8px}
+    .brochure-actions{display:flex;flex-wrap:wrap;gap:8px}
+
   </style>
 </head>
 
@@ -253,44 +267,91 @@
   </div>
 </section>
 
+
 <section class="tour" id="tours">
   <div class="container">
-    <h2 class="section-title">โปรแกรมทัวร์แนะนำ</h2>
-    <p class="section-subtitle">ตัวอย่างเส้นทางยอดนิยมของ Happy Trip Holiday</p>
+    <h2 class="section-title">โปรแกรมทัวร์แยกตามภูมิภาค</h2>
+    <p class="section-subtitle">เลือกดูโปรแกรมทัวร์ตาม 6 ภูมิภาคของประเทศไทย</p>
 
-    <div class="tour-grid">
-      <article class="tour-card">
-        <img src="noen-nangphaya.jpeg" alt="ทัวร์จันทบุรี">
-        <div class="content">
-          <h3>จันทบุรี 4 วัน 2 คืน</h3>
-          <p>เนินนางพญา อาสนวิหาร หมู่บ้านไร้แผ่นดิน เจดีย์กลางน้ำ และบุฟเฟต์อาหารทะเล</p>
-          <div class="price">ราคาเริ่มต้น 6,888 บาท</div>
-          <a class="button primary" href="#quote">ขอใบเสนอราคา</a>
-        </div>
-      </article>
+    <div class="region-tabs">
+      <button class="region-tab" data-region="north">ภาคเหนือ</button>
+      <button class="region-tab" data-region="central">ภาคกลาง</button>
+      <button class="region-tab" data-region="northeast">ภาคอีสาน</button>
+      <button class="region-tab active" data-region="east">ภาคตะวันออก</button>
+      <button class="region-tab" data-region="west">ภาคตะวันตก</button>
+      <button class="region-tab" data-region="south">ภาคใต้</button>
+    </div>
 
-      <article class="tour-card">
-        <img src="coastal-road.jpeg" alt="ทัวร์ระยองพัทยา">
-        <div class="content">
-          <h3>ระยอง–พัทยา 4 วัน 2 คืน</h3>
-          <p>ทุ่งโปรงทอง หาดแหลมแม่พิมพ์ เขาชีจรรย์ สวนนงนุช และหาดจอมเทียน</p>
-          <div class="price">ราคาเริ่มต้น 7,333 บาท</div>
-          <a class="button primary" href="#quote">ขอใบเสนอราคา</a>
-        </div>
-      </article>
+    <div class="region-section" id="north">
+      <div class="empty-region">
+        <h3>ภาคเหนือ</h3>
+        <p>กำลังเพิ่มโปรแกรมเชียงใหม่ เชียงราย น่าน แม่ฮ่องสอน และเส้นทางภาคเหนือ</p>
+      </div>
+    </div>
 
-      <article class="tour-card">
-        <img src="cathedral-wide.jpeg" alt="ทัวร์ศึกษาดูงาน">
-        <div class="content">
-          <h3>ศึกษาดูงานและสัมมนา</h3>
-          <p>ออกแบบเส้นทางตามหัวข้อ งบประมาณ จำนวนผู้เดินทาง และวัตถุประสงค์ของหน่วยงาน</p>
-          <div class="price">จัดตามงบประมาณ</div>
-          <a class="button line" href="https://line.me/ti/p/~first240" target="_blank" rel="noopener">ติดต่อ LINE</a>
-        </div>
-      </article>
+    <div class="region-section" id="central">
+      <div class="empty-region">
+        <h3>ภาคกลาง</h3>
+        <p>กำลังเพิ่มโปรแกรมกรุงเทพฯ กาญจนบุรี เพชรบุรี อยุธยา และเส้นทางภาคกลาง</p>
+      </div>
+    </div>
+
+    <div class="region-section" id="northeast">
+      <div class="empty-region">
+        <h3>ภาคอีสาน</h3>
+        <p>กำลังเพิ่มโปรแกรมอุดรธานี หนองคาย เลย นครราชสีมา และเส้นทางภาคอีสาน</p>
+      </div>
+    </div>
+
+    <div class="region-section active" id="east">
+      <div class="tour-grid">
+
+        <article class="brochure-card">
+          <img src="tour-rayong-pattaya.jpeg" alt="โปรแกรมทัวร์ระยอง พัทยา 4 วัน 2 คืน">
+          <div class="brochure-info">
+            <h3>ระยอง–พัทยา 4 วัน 2 คืน</h3>
+            <p>Miracle สวนดอกไม้เมืองหนาว ทุ่งโปรงทอง หาดแหลมแม่พิมพ์ เขาชีจรรย์ สวนนงนุช หาดจอมเทียน และ Walking Street</p>
+            <div class="price">7,333 บาท/ท่าน</div>
+            <div class="brochure-actions">
+              <a class="button line" href="https://line.me/ti/p/~first240" target="_blank" rel="noopener">สอบถามโปรแกรม</a>
+              <a class="button phone" href="tel:0840494999">โทรจอง</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="brochure-card">
+          <img src="tour-chanthaburi.jpeg" alt="โปรแกรมทัวร์จันทบุรี 4 วัน 2 คืน">
+          <div class="brochure-info">
+            <h3>จันทบุรี 4 วัน 2 คืน</h3>
+            <p>วัดมังกรบุปผาราม อาสนวิหารพระนางมารีอาปฏิสนธินิรมล ชุมชนริมน้ำจันทบูร จุดชมวิวเนินนางพญา หมู่บ้านไร้แผ่นดิน และบุฟเฟต์อาหารทะเล</p>
+            <div class="price">6,888 บาท/ท่าน</div>
+            <div class="brochure-actions">
+              <a class="button line" href="https://line.me/ti/p/~first240" target="_blank" rel="noopener">สอบถามโปรแกรม</a>
+              <a class="button phone" href="tel:0840494999">โทรจอง</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+
+
+    <div class="region-section" id="west">
+      <div class="empty-region">
+        <h3>ภาคตะวันตก</h3>
+        <p>กำลังเพิ่มโปรแกรมกาญจนบุรี ราชบุรี เพชรบุรี ประจวบคีรีขันธ์ และเส้นทางภาคตะวันตก</p>
+      </div>
+    </div>
+
+    <div class="region-section" id="south">
+      <div class="empty-region">
+        <h3>ภาคใต้</h3>
+        <p>กำลังเพิ่มโปรแกรมภูเก็ต กระบี่ พังงา สุราษฎร์ธานี และเส้นทางภาคใต้</p>
+      </div>
     </div>
   </div>
 </section>
+
 
 <section id="reviews">
   <div class="container">
@@ -454,6 +515,18 @@
 
     const url = "https://wa.me/66840494999?text=" + encodeURIComponent(message);
     window.open(url, "_blank");
+  });
+</script>
+
+
+<script>
+  document.querySelectorAll(".region-tab").forEach(function(tab){
+    tab.addEventListener("click", function(){
+      document.querySelectorAll(".region-tab").forEach(function(t){ t.classList.remove("active"); });
+      document.querySelectorAll(".region-section").forEach(function(s){ s.classList.remove("active"); });
+      tab.classList.add("active");
+      document.getElementById(tab.dataset.region).classList.add("active");
+    });
   });
 </script>
 
