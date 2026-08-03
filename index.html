@@ -80,7 +80,7 @@
     .line{background:var(--green)}
     .maps{background:#0a6fba}
     .primary{background:#0b6b57}
-    .whatsapp{background:#25d366}
+    .whatsapp{background:#06c755}
 
     section{padding:72px 0}
     .section-title{text-align:center;color:var(--navy);font-size:36px;margin-bottom:8px}
@@ -172,6 +172,77 @@
     .brochure-info h3{color:var(--navy);font-size:24px;margin-bottom:8px}
     .brochure-actions{display:flex;flex-wrap:wrap;gap:8px}
 
+
+    .line-official-box{
+      margin-top:24px;
+      padding:22px;
+      background:#f0fff5;
+      border:2px solid #06c755;
+      border-radius:20px;
+      text-align:center;
+    }
+    .line-official-box h4{
+      color:#065f46;
+      font-size:22px;
+      margin-bottom:8px;
+    }
+    .line-official-box img{
+      width:min(280px,100%);
+      margin:14px auto;
+      border-radius:16px;
+      background:#fff;
+      padding:10px;
+      box-shadow:0 8px 22px rgba(0,0,0,.12);
+    }
+    .line-official-box p{
+      color:#475569;
+    }
+
+
+    .line-channel-grid{
+      display:grid;
+      grid-template-columns:1.15fr .85fr;
+      gap:18px;
+      margin-top:22px;
+    }
+    .line-channel{
+      border-radius:18px;
+      padding:22px;
+      text-align:center;
+    }
+    .line-channel.primary-line{
+      background:#effff4;
+      border:2px solid #06c755;
+    }
+    .line-channel.secondary-line{
+      background:#f8fafc;
+      border:1px solid #cbd5e1;
+    }
+    .line-channel h4{
+      font-size:21px;
+      margin-bottom:8px;
+      color:#0f5132;
+    }
+    .line-channel.secondary-line h4{
+      color:#334155;
+    }
+    .line-channel .label-main{
+      display:inline-block;
+      background:#06c755;
+      color:#fff;
+      font-weight:700;
+      border-radius:20px;
+      padding:5px 12px;
+      margin-bottom:10px;
+      font-size:13px;
+    }
+    .line-personal{
+      background:#3b82f6;
+    }
+    @media(max-width:700px){
+      .line-channel-grid{grid-template-columns:1fr}
+    }
+
   </style>
 </head>
 
@@ -210,7 +281,8 @@
     <h2>เดินทางมั่นใจ<br>ไปกับ Happy Trip Holiday</h2>
     <p>บริการจัดทัวร์ ศึกษาดูงาน สัมมนา ทัศนศึกษา และทัวร์หมู่คณะทั่วประเทศไทย</p>
     <a class="button phone" href="tel:0840494999">📞 โทรหาเรา</a>
-    <a class="button line" href="https://line.me/ti/p/~first240" target="_blank" rel="noopener">💬 ติดต่อ LINE</a>
+    <a class="button line" href="https://lin.ee/7tF6Edx" target="_blank" rel="noopener">💬 LINE Official</a>
+    <a class="button line-personal" href="https://line.me/ti/p/~first240" target="_blank" rel="noopener">👤 LINE คุณเฟิร์ส</a>
   </div>
 </section>
 
@@ -313,7 +385,7 @@
             <p>Miracle สวนดอกไม้เมืองหนาว ทุ่งโปรงทอง หาดแหลมแม่พิมพ์ เขาชีจรรย์ สวนนงนุช หาดจอมเทียน และ Walking Street</p>
             <div class="price">7,333 บาท/ท่าน</div>
             <div class="brochure-actions">
-              <a class="button line" href="https://line.me/ti/p/~first240" target="_blank" rel="noopener">สอบถามโปรแกรม</a>
+              <a class="button line" href="https://lin.ee/7tF6Edx" target="_blank" rel="noopener">สอบถามโปรแกรม</a>
               <a class="button phone" href="tel:0840494999">โทรจอง</a>
             </div>
           </div>
@@ -326,7 +398,7 @@
             <p>วัดมังกรบุปผาราม อาสนวิหารพระนางมารีอาปฏิสนธินิรมล ชุมชนริมน้ำจันทบูร จุดชมวิวเนินนางพญา หมู่บ้านไร้แผ่นดิน และบุฟเฟต์อาหารทะเล</p>
             <div class="price">6,888 บาท/ท่าน</div>
             <div class="brochure-actions">
-              <a class="button line" href="https://line.me/ti/p/~first240" target="_blank" rel="noopener">สอบถามโปรแกรม</a>
+              <a class="button line" href="https://lin.ee/7tF6Edx" target="_blank" rel="noopener">สอบถามโปรแกรม</a>
               <a class="button phone" href="tel:0840494999">โทรจอง</a>
             </div>
           </div>
@@ -397,7 +469,7 @@
 <section class="quote" id="quote">
   <div class="container">
     <h2 class="section-title">ขอใบเสนอราคา</h2>
-    <p class="section-subtitle">กรอกข้อมูลแล้วกดส่ง ระบบจะเปิด WhatsApp พร้อมข้อความให้ทันที</p>
+    <p class="section-subtitle">กรอกข้อมูลแล้วกดส่ง ระบบจะคัดลอกข้อความและเปิด LINE Official ของ Happy Trip Holiday</p>
 
     <div class="quote-grid">
       <div>
@@ -446,8 +518,8 @@
             <label for="detail">รายละเอียดเพิ่มเติม</label>
             <textarea id="detail" placeholder="งบประมาณ จุดขึ้นรถ จำนวนวัน หรือความต้องการเพิ่มเติม"></textarea>
           </div>
-          <button class="button whatsapp" type="submit">ส่งข้อมูลทาง WhatsApp</button>
-          <div class="form-note">เว็บไซต์นี้เป็นเว็บแบบ Static จึงไม่เก็บข้อมูลไว้ในระบบ ข้อมูลจะถูกส่งผ่าน WhatsApp เท่านั้น</div>
+          <button class="button line" type="submit">ส่งข้อมูลทาง LINE</button>
+          <div class="form-note">เว็บไซต์นี้ไม่เก็บข้อมูลไว้ในระบบ เมื่อกดส่ง ระบบจะคัดลอกข้อความและเปิด LINE กรุณากดวางข้อความในช่องแชตแล้วส่งให้เรา</div>
         </form>
       </div>
     </div>
@@ -464,10 +536,28 @@
         <div class="contact-item">📍 240 หมู่ 6 ตำบลลำภู อำเภอเมือง จังหวัดหนองบัวลำภู 39000</div>
         <div class="contact-item">📞 <a href="tel:0840494999">084-049-4999</a></div>
         <div class="contact-item">📞 <a href="tel:0957697749">095-769-7749</a></div>
-        <div class="contact-item">💬 LINE ID: first240</div>
+        <div class="contact-item">💬 LINE Official เป็นช่องทางหลัก | LINE คุณเฟิร์สเป็นช่องทางสำรอง</div>
         <div class="contact-item">🪪 ใบอนุญาตนำเที่ยวเลขที่ 52/00625</div>
+        
+        <div class="line-channel-grid">
+          <div class="line-channel primary-line">
+            <div class="label-main">ช่องทางหลัก</div>
+            <h4>LINE Official</h4>
+            <p>สำหรับสอบถามโปรแกรมทัวร์ ขอใบเสนอราคา และติดตามข่าวสาร</p>
+            <img src="line-official-qr.png" alt="QR Code LINE Official Happy Trip Holiday" style="width:min(260px,100%);margin:14px auto;border-radius:16px;background:#fff;padding:10px;box-shadow:0 8px 22px rgba(0,0,0,.12);">
+            <a class="button line" href="https://lin.ee/7tF6Edx" target="_blank" rel="noopener">เพิ่มเพื่อน LINE Official</a>
+          </div>
+
+          <div class="line-channel secondary-line">
+            <h4>LINE คุณเฟิร์ส</h4>
+            <p>ช่องทางสำรองสำหรับติดต่อผู้ประสานงานโดยตรง</p>
+            <p style="margin:12px 0;font-weight:700;">LINE ID: first240</p>
+            <a class="button line-personal" href="https://line.me/ti/p/~first240" target="_blank" rel="noopener">แชทกับคุณเฟิร์ส</a>
+          </div>
+        </div>
+
         <a class="button phone" href="tel:0840494999">โทรทันที</a>
-        <a class="button line" href="https://line.me/ti/p/~first240" target="_blank" rel="noopener">เพิ่มเพื่อน LINE</a>
+        <a class="button line" href="https://lin.ee/7tF6Edx" target="_blank" rel="noopener">เพิ่มเพื่อน LINE</a>
         <a class="button maps" href="https://maps.app.goo.gl/pk5TnpbPJMswgmpJ8?g_st=ic" target="_blank" rel="noopener">📍 เปิดเส้นทาง</a>
       </div>
 
@@ -488,11 +578,12 @@
 
 <div class="floating">
   <a class="phone" href="tel:0840494999" title="โทรหาเรา">📞</a>
-  <a class="line" href="https://line.me/ti/p/~first240" target="_blank" rel="noopener" title="ติดต่อ LINE">💬</a>
+  <a class="line" href="https://lin.ee/7tF6Edx" target="_blank" rel="noopener" title="LINE Official">💬</a>
+  <a class="line-personal" href="https://line.me/ti/p/~first240" target="_blank" rel="noopener" title="LINE คุณเฟิร์ส">👤</a>
 </div>
 
 <script>
-  document.getElementById("quoteForm").addEventListener("submit", function(event){
+  document.getElementById("quoteForm").addEventListener("submit", async function(event){
     event.preventDefault();
 
     const name = document.getElementById("name").value.trim();
@@ -504,17 +595,32 @@
     const detail = document.getElementById("detail").value.trim();
 
     const message =
-      "ขอใบเสนอราคา Happy Trip Holiday\n" +
-      "ชื่อผู้ติดต่อ: " + name + "\n" +
-      "เบอร์โทร: " + phone + "\n" +
-      "ประเภท: " + trip + "\n" +
-      "เส้นทาง: " + (destination || "-") + "\n" +
-      "จำนวนผู้เดินทาง: " + (people || "-") + "\n" +
-      "วันที่เดินทาง: " + (date || "-") + "\n" +
+      "ขอใบเสนอราคา Happy Trip Holiday
+" +
+      "ชื่อผู้ติดต่อ: " + name + "
+" +
+      "เบอร์โทร: " + phone + "
+" +
+      "ประเภท: " + trip + "
+" +
+      "เส้นทาง: " + (destination || "-") + "
+" +
+      "จำนวนผู้เดินทาง: " + (people || "-") + "
+" +
+      "วันที่เดินทาง: " + (date || "-") + "
+" +
       "รายละเอียด: " + (detail || "-");
 
-    const url = "https://wa.me/66840494999?text=" + encodeURIComponent(message);
-    window.open(url, "_blank");
+    try {
+      await navigator.clipboard.writeText(message);
+      alert("คัดลอกข้อมูลเรียบร้อยแล้ว
+ระบบจะเปิด LINE ของ Happy Trip Holiday
+กรุณากดวางข้อความในช่องแชต แล้วกดส่ง");
+    } catch (error) {
+      window.prompt("คัดลอกข้อความนี้ แล้วนำไปวางใน LINE", message);
+    }
+
+    window.open("https://lin.ee/7tF6Edx", "_blank");
   });
 </script>
 
