@@ -243,6 +243,93 @@
       .line-channel-grid{grid-template-columns:1fr}
     }
 
+
+    .thai-map-section{
+      background:linear-gradient(180deg,#eef5fb,#ffffff);
+    }
+    .map-layout{
+      display:grid;
+      grid-template-columns:.9fr 1.1fr;
+      gap:30px;
+      align-items:center;
+    }
+    .map-card{
+      background:#fff;
+      padding:24px;
+      border-radius:24px;
+      box-shadow:var(--shadow);
+    }
+    .thai-map{
+      width:100%;
+      max-width:520px;
+      margin:auto;
+      display:block;
+    }
+    .thai-map .region-shape{
+      cursor:pointer;
+      stroke:#fff;
+      stroke-width:5;
+      transition:.25s;
+      filter:drop-shadow(0 4px 8px rgba(0,0,0,.12));
+    }
+    .thai-map .region-shape:hover,
+    .thai-map .region-shape.active{
+      transform:scale(1.025);
+      transform-origin:center;
+      filter:brightness(1.08) drop-shadow(0 7px 12px rgba(0,0,0,.18));
+    }
+    .thai-map text{
+      fill:#fff;
+      font-size:22px;
+      font-weight:700;
+      pointer-events:none;
+      text-anchor:middle;
+      paint-order:stroke;
+      stroke:rgba(0,0,0,.45);
+      stroke-width:4px;
+    }
+    .map-info{
+      background:#fff;
+      padding:30px;
+      border-radius:24px;
+      box-shadow:var(--shadow);
+      min-height:390px;
+    }
+    .map-info h3{
+      color:var(--navy);
+      font-size:30px;
+      margin-bottom:10px;
+    }
+    .map-info p{
+      color:var(--muted);
+      margin-bottom:16px;
+    }
+    .map-info .province-list{
+      display:flex;
+      flex-wrap:wrap;
+      gap:8px;
+      margin:15px 0 22px;
+    }
+    .map-info .province-list span{
+      background:#edf4fb;
+      color:var(--navy);
+      border-radius:20px;
+      padding:7px 12px;
+      font-size:14px;
+      font-weight:700;
+    }
+    .map-hint{
+      text-align:center;
+      color:var(--muted);
+      margin-top:12px;
+      font-size:14px;
+    }
+    @media(max-width:900px){
+      .map-layout{grid-template-columns:1fr}
+      .map-info{text-align:center}
+      .map-info .province-list{justify-content:center}
+    }
+
   </style>
 </head>
 
@@ -266,6 +353,7 @@
     <a href="#home">หน้าแรก</a>
     <a href="#about">เกี่ยวกับเรา</a>
     <a href="#services">บริการ</a>
+    <a href="#thai-map">เลือกภาค</a>
     <a href="#fleet">รถของเรา</a>
     <a href="#tours">โปรแกรมทัวร์</a>
     <a href="#reviews">รีวิว</a>
@@ -318,6 +406,60 @@
     </div>
   </div>
 </section>
+
+<section class="thai-map-section" id="thai-map">
+  <div class="container">
+    <h2 class="section-title">เลือกโปรแกรมทัวร์จากแผนที่ประเทศไทย</h2>
+    <p class="section-subtitle">คลิกภูมิภาคบนแผนที่ เพื่อดูโปรแกรมทัวร์ของแต่ละภาค</p>
+
+    <div class="map-layout">
+      <div class="map-card">
+        <svg class="thai-map" viewBox="0 0 500 800" role="img" aria-label="แผนที่ประเทศไทยเลือกภูมิภาคได้">
+          <!-- ภาคเหนือ -->
+          <path class="region-shape active" data-region="north" fill="#2f80ed"
+            d="M170 40 C130 55 105 95 112 135 C118 170 95 200 120 235 C145 267 170 250 188 282 C202 305 232 302 245 275 C260 245 280 220 272 185 C265 150 285 115 260 82 C238 53 205 32 170 40 Z"/>
+          <text x="190" y="155">ภาคเหนือ</text>
+
+          <!-- ภาคอีสาน -->
+          <path class="region-shape" data-region="northeast" fill="#27ae60"
+            d="M270 160 C310 145 350 152 385 178 C420 205 432 245 418 283 C405 320 375 342 340 338 C310 333 290 312 265 298 C242 285 235 250 245 220 C253 198 248 173 270 160 Z"/>
+          <text x="335" y="250">ภาคอีสาน</text>
+
+          <!-- ภาคกลาง -->
+          <path class="region-shape" data-region="central" fill="#f2c94c"
+            d="M205 285 C235 270 270 280 292 305 C310 325 312 355 300 380 C288 405 265 420 238 415 C210 410 188 390 182 362 C176 334 181 300 205 285 Z"/>
+          <text x="240" y="350">ภาคกลาง</text>
+
+          <!-- ภาคตะวันออก -->
+          <path class="region-shape" data-region="east" fill="#f2994a"
+            d="M300 330 C335 320 373 328 395 350 C415 370 408 400 382 415 C355 430 325 425 300 410 C280 398 275 370 285 350 C289 341 294 335 300 330 Z"/>
+          <text x="347" y="375">ตะวันออก</text>
+
+          <!-- ภาคตะวันตก -->
+          <path class="region-shape" data-region="west" fill="#9b51e0"
+            d="M150 255 C175 245 195 260 205 285 C215 312 205 345 190 372 C175 400 165 430 145 455 C125 480 100 472 95 442 C90 415 105 390 105 362 C105 330 115 295 135 270 C140 264 145 259 150 255 Z"/>
+          <text x="145" y="355">ตะวันตก</text>
+
+          <!-- ภาคใต้ -->
+          <path class="region-shape" data-region="south" fill="#eb5757"
+            d="M220 410 C245 420 260 445 258 475 C255 515 275 545 270 585 C265 620 280 650 265 685 C250 720 265 750 242 775 C225 792 205 775 208 750 C212 720 195 700 205 668 C215 635 198 610 205 578 C212 545 192 520 200 488 C207 460 192 430 205 415 C210 410 215 408 220 410 Z"/>
+          <text x="232" y="590">ภาคใต้</text>
+        </svg>
+        <div class="map-hint">แตะหรือคลิกบนภูมิภาคที่ต้องการ</div>
+      </div>
+
+      <div class="map-info" id="mapInfo">
+        <h3>ภาคเหนือ</h3>
+        <p>เส้นทางภูเขา ธรรมชาติ วัฒนธรรมล้านนา และอากาศเย็นสบาย</p>
+        <div class="province-list">
+          <span>เชียงใหม่</span><span>เชียงราย</span><span>น่าน</span><span>แม่ฮ่องสอน</span><span>ลำปาง</span>
+        </div>
+        <a class="button primary map-view-tours" href="#tours" data-target-region="north">ดูโปรแกรมภาคเหนือ</a>
+      </div>
+    </div>
+  </div>
+</section>
+
 
 <section class="fleet" id="fleet">
   <div class="container">
@@ -634,6 +776,88 @@
       document.getElementById(tab.dataset.region).classList.add("active");
     });
   });
+</script>
+
+
+<script>
+  const regionData = {
+    north: {
+      title: "ภาคเหนือ",
+      desc: "เส้นทางภูเขา ธรรมชาติ วัฒนธรรมล้านนา และอากาศเย็นสบาย",
+      provinces: ["เชียงใหม่","เชียงราย","น่าน","แม่ฮ่องสอน","ลำปาง"]
+    },
+    central: {
+      title: "ภาคกลาง",
+      desc: "เมืองประวัติศาสตร์ แหล่งเรียนรู้ วัดสำคัญ และเส้นทางใกล้กรุงเทพฯ",
+      provinces: ["กรุงเทพฯ","อยุธยา","นครปฐม","สุพรรณบุรี","ลพบุรี"]
+    },
+    northeast: {
+      title: "ภาคอีสาน",
+      desc: "วัฒนธรรมอีสาน แหล่งอารยธรรม ธรรมชาติ และเส้นทางศึกษาดูงาน",
+      provinces: ["อุดรธานี","หนองคาย","เลย","ขอนแก่น","นครราชสีมา"]
+    },
+    east: {
+      title: "ภาคตะวันออก",
+      desc: "ทะเลสวย ผลไม้ อาหารทะเล และเมืองท่องเที่ยวยอดนิยม",
+      provinces: ["ชลบุรี","ระยอง","จันทบุรี","ตราด","ฉะเชิงเทรา"]
+    },
+    west: {
+      title: "ภาคตะวันตก",
+      desc: "ภูเขา น้ำตก เขื่อน เมืองประวัติศาสตร์ และเส้นทางธรรมชาติ",
+      provinces: ["กาญจนบุรี","ราชบุรี","เพชรบุรี","ประจวบคีรีขันธ์","ตาก"]
+    },
+    south: {
+      title: "ภาคใต้",
+      desc: "ทะเล เกาะ ชายหาด วัฒนธรรมท้องถิ่น และอาหารใต้",
+      provinces: ["ภูเก็ต","กระบี่","พังงา","สุราษฎร์ธานี","สงขลา"]
+    }
+  };
+
+  function showMapRegion(region){
+    const data = regionData[region];
+    const info = document.getElementById("mapInfo");
+
+    document.querySelectorAll(".region-shape").forEach(function(shape){
+      shape.classList.toggle("active", shape.dataset.region === region);
+    });
+
+    info.innerHTML = `
+      <h3>${data.title}</h3>
+      <p>${data.desc}</p>
+      <div class="province-list">
+        ${data.provinces.map(function(p){ return `<span>${p}</span>`; }).join("")}
+      </div>
+      <a class="button primary map-view-tours" href="#tours" data-target-region="${region}">
+        ดูโปรแกรม${data.title}
+      </a>
+    `;
+
+    bindMapTourButton();
+  }
+
+  function openRegionTab(region){
+    const tab = document.querySelector('.region-tab[data-region="' + region + '"]');
+    if(tab){
+      tab.click();
+    }
+  }
+
+  function bindMapTourButton(){
+    const button = document.querySelector(".map-view-tours");
+    if(button){
+      button.addEventListener("click", function(){
+        openRegionTab(button.dataset.targetRegion);
+      });
+    }
+  }
+
+  document.querySelectorAll(".region-shape").forEach(function(shape){
+    shape.addEventListener("click", function(){
+      showMapRegion(shape.dataset.region);
+    });
+  });
+
+  bindMapTourButton();
 </script>
 
 </body>
