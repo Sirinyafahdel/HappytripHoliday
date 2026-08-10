@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://happytripth.com/sitemap.xml
