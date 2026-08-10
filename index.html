@@ -345,6 +345,79 @@
 .brochure-close{position:fixed;top:18px;right:20px;width:48px;height:48px;border:0;border-radius:50%;background:#fff;font-size:28px;cursor:pointer;z-index:5100}
 @media(max-width:600px){.program-card img{height:300px}}
 
+
+    .payment-section{
+      background:linear-gradient(135deg,#f7fbff,#eef6ff);
+    }
+    .payment-card{
+      max-width:760px;
+      margin:auto;
+      background:#fff;
+      border-radius:24px;
+      padding:34px;
+      box-shadow:var(--shadow,0 10px 30px rgba(0,0,0,.12));
+      border:1px solid #dbe7f3;
+    }
+    .bank-head{
+      display:flex;
+      gap:18px;
+      align-items:center;
+      margin-bottom:22px;
+    }
+    .bank-logo{
+      width:74px;
+      height:74px;
+      border-radius:18px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:#16a6e0;
+      color:#fff;
+      font-weight:800;
+      font-size:24px;
+      box-shadow:0 6px 16px rgba(22,166,224,.25);
+    }
+    .bank-head h3{
+      color:#082c5c;
+      font-size:28px;
+      margin-bottom:3px;
+    }
+    .account-box{
+      background:#f7fbff;
+      border:1px dashed #9cc7df;
+      border-radius:18px;
+      padding:22px;
+      margin:18px 0;
+    }
+    .account-row{
+      display:flex;
+      justify-content:space-between;
+      gap:18px;
+      padding:9px 0;
+      border-bottom:1px solid #e5edf3;
+    }
+    .account-row:last-child{border-bottom:0}
+    .account-label{color:#64748b;font-weight:700}
+    .account-value{color:#0f2742;font-weight:800;text-align:right}
+    .payment-warning{
+      margin-top:20px;
+      padding:16px 18px;
+      background:#fff8e6;
+      border-left:5px solid #f4b400;
+      border-radius:12px;
+      color:#6b4d00;
+      font-weight:700;
+    }
+    .payment-actions{
+      text-align:center;
+      margin-top:22px;
+    }
+    @media(max-width:600px){
+      .bank-head{align-items:flex-start}
+      .account-row{display:block}
+      .account-value{text-align:left;margin-top:4px}
+    }
+
 </style>
 </head>
 
@@ -374,6 +447,7 @@
     <a href="#reviews">รีวิว</a>
     <a href="#gallery">แกลเลอรี</a>
     <a href="#quote">ขอใบเสนอราคา</a>
+    <a href="#payment">ชำระเงิน</a>
     <a href="#contact">ติดต่อเรา</a>
   </div>
 </nav>
@@ -708,6 +782,45 @@
           <button class="button line" type="submit">ส่งข้อมูลทาง LINE</button>
           <div class="form-note">เว็บไซต์นี้ไม่เก็บข้อมูลไว้ในระบบ เมื่อกดส่ง ระบบจะคัดลอกข้อความและเปิด LINE กรุณากดวางข้อความในช่องแชตแล้วส่งให้เรา</div>
         </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="payment-section" id="payment">
+  <div class="container">
+    <h2 class="section-title">ช่องทางการชำระเงิน</h2>
+    <p class="section-subtitle">ชำระค่าบริการกับ Happy Trip Holiday และแจ้งหลักฐานผ่าน LINE Official</p>
+
+    <div class="payment-card">
+      <div class="bank-head">
+        <div class="bank-logo">KTB</div>
+        <div>
+          <h3>ธนาคารกรุงไทย</h3>
+          <p>บัญชีสำหรับชำระค่าบริการ</p>
+        </div>
+      </div>
+
+      <div class="account-box">
+        <div class="account-row">
+          <div class="account-label">เลขที่บัญชี</div>
+          <div class="account-value">402-067-3799</div>
+        </div>
+        <div class="account-row">
+          <div class="account-label">ชื่อบัญชี</div>
+          <div class="account-value">นางสาวสิรินทร์ยา แก้วใสย</div>
+        </div>
+      </div>
+
+      <div class="payment-warning">
+        กรุณาตรวจสอบชื่อบัญชีก่อนโอน และส่งหลักฐานการชำระผ่าน LINE Official
+      </div>
+
+      <div class="payment-actions">
+        <a class="button line" href="https://lin.ee/7tF6Edx" target="_blank" rel="noopener">
+          แจ้งชำระเงินผ่าน LINE Official
+        </a>
       </div>
     </div>
   </div>
