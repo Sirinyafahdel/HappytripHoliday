@@ -507,7 +507,77 @@
 <button class="button primary" type="button" onclick="openBrochure('tour-udon-nongkhai-buengkan.jpeg','อุดรธานี–หนองคาย–บึงกาฬ 2 วัน 1 คืน')">ดูโบรชัวร์เต็ม</button>
 <a class="button line" href="https://lin.ee/7tF6Edx" target="_blank" rel="noopener">LINE Official</a>
 </div></div></article></div></div>
-<div class="region-section" id="east"><div class="tour-grid"><article class="program-card">
+<script>
+(() => {
+  const grid = document.querySelector('#northeast .tour-grid');
+  if (!grid) return;
+
+  const newTours = [
+    {
+      img: 'DD09B2A7-2BC3-4A54-A9E1-BE03316EF9EB.jpeg',
+      title: 'ถ้ำนาคี (นครพนม) - ถ้ำนาคา (บึงกาฬ) 3 วัน 2 คืน',
+      price: '5,500 บาท/ท่าน'
+    },
+    {
+      img: 'BA55CC68-EF6F-40CE-AA65-B68103C4FBF1.jpeg',
+      title: 'ถ้ำนาคี (นครพนม) 2 วัน 1 คืน',
+      price: '3,400 บาท/ท่าน'
+    },
+    {
+      img: 'FB9CC384-874F-4369-834B-0903758F8E84.jpeg',
+      title: 'ถ้ำนาคี (นครพนม) - ถ้ำนาคา (บึงกาฬ) 4 วัน 2 คืน',
+      price: '6,000 บาท/ท่าน'
+    },
+    {
+      img: '110A6DDA-2F0A-4F22-8236-DF24E9DAC5D9.jpeg',
+      title: 'ถ้ำนาคา (บึงกาฬ) - นาคี (นครพนม) 3 วัน 2 คืน',
+      price: '5,800 บาท/ท่าน'
+    },
+    {
+      img: 'ECB3B0BC-318C-4A72-B92B-A4402263BC8F.jpeg',
+      title: 'ถ้ำนาคา (บึงกาฬ) - นาคี (นครพนม) 3 วัน 2 คืน',
+      price: '5,800 บาท/ท่าน'
+    },
+    {
+      img: '5FD94393-ED0A-49FA-92E8-D09C1480902A.jpeg',
+      title: 'นครพนม - สกลนคร 2 วัน 1 คืน',
+      price: '3,500 บาท/ท่าน'
+    },
+    {
+      img: '8C175C8C-73BF-4DE0-9F1F-222C85FB8D7B.jpeg',
+      title: 'นครพนม - มุกดาหาร 2 วัน 1 คืน',
+      price: '3,500 บาท/ท่าน'
+    }
+  ];
+
+  newTours.forEach(tour => {
+    const card = document.createElement('article');
+    card.className = 'program-card';
+
+    card.innerHTML = `
+      <img src="${tour.img}" alt="${tour.title}"
+           onclick="openBrochure('${tour.img}','${tour.title}')">
+      <div class="content">
+        <h3>${tour.title}</h3>
+        <div class="program-meta">ภาคอีสาน</div>
+        <div class="price">${tour.price}</div>
+        <div class="program-actions">
+          <button class="button primary" type="button"
+            onclick="openBrochure('${tour.img}','${tour.title}')">
+            ดูโปรแกรม
+          </button>
+          <a class="button line"
+             href="https://lin.ee/7tF6Edx"
+             target="_blank"
+             rel="noopener">LINE Official</a>
+        </div>
+      </div>
+    `;
+
+    grid.appendChild(card);
+  });
+})();
+</script><div class="region-section" id="east"><div class="tour-grid"><article class="program-card">
 <img src="tour-rayong-pattaya.jpeg" alt="ระยอง–พัทยา 4 วัน 2 คืน" onclick="openBrochure('tour-rayong-pattaya.jpeg','ระยอง–พัทยา 4 วัน 2 คืน')">
 <div class="content">
 <h3>ระยอง–พัทยา 4 วัน 2 คืน</h3><div class="program-meta">ภาคตะวันออก • กรุ๊ป 45 ท่าน</div><p>Miracle สวนดอกไม้เมืองหนาว ทุ่งโปรงทอง หาดแหลมแม่พิมพ์ เขาชีจรรย์ สวนนงนุช หาดจอมเทียน และ Walking Street</p>
